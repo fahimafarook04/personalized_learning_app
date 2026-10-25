@@ -1,16 +1,23 @@
 import 'package:flutter/material.dart';
+import 'screens/auth/welcome_screen.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  runApp(const MyApp());
+}
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Personalized Learning App',
-      home: Scaffold(
-        appBar: AppBar(title: Text('Welcome')),
-        body: Center(child: Text('Project skeleton — implement screens here')),
+      debugShowCheckedModeBanner: false,
+      title: 'Personalized Learning',
+      
+      theme: ThemeData(
+        fontFamily: 'Dyslexie',
       ),
+      home: const WelcomeScreen(),
     );
   }
 }
